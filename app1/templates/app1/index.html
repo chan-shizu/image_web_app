@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block customcss %}
+    <link href="{% static '/app1/css/style.css' %}" rel="stylesheet">
+{% endblock customcss %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block content %}
+    <body>     
+        <div class = "container">
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <p class="h1">>Truly Innovative Service</p>
+                    <div class="p-3 mb-2 bg-white text-dark">
+                        写真うつりが悪い時くて，「あー，こんなんならシズヤの顔の方」ってとき，ありますよね．<br>
+                        でも大丈夫!このサービスを使えば(正面を向いていて)(マスクなどで顔を覆ってなければ)誰でも自分の顔に僕の顔をかぶせる事ができます．<br>
+                        憂鬱なアルバムめくりにさようなら，愉快な思い出巡りにこんにちわ．早速始めてみましょう
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <img src={{  "../static/app1/images/man2_output.jpg" }} alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src={{  "../static/app1/images/girl_output.jpg" }} alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src={{  "../static/app1/images/japanese_output.jpg" }}  alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src={{  "../static/app1/images/foreigners_output.jpg" }}  alt="" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-floating mb-3">
+                    <!--<input type="text" name="description" class="form-control" id="floatingInput" placeholder="some description">
+                    <label for="floatingInput">テキスト</label>-->
+                        <div class="col-sm-12">
+                            <label for="floatingInput">写真を選択してください．セキュリティも何もないので，そのつもりでお願いします．</label>
+                            <input type="file" name="photo" class="form-control" id="floatingInput" placeholder="photo" required>
+                        </div>
+                        <div class="col-sm-12 text-center">
+                            <button type="submit" class="btn btn-primary center-block">送信!</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!--<td>{{ obj.description }}</td>
+                <td><img src="{{ obj.output.url }}" width="100" height="100"/></td>
+                <td>{{ obj.uploaded_at }}</td>-->
+            </div>
+        </div>
+    </body>
+{% endblock content %}
