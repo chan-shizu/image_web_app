@@ -17,3 +17,5 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myapp.settings')
 
 # herokuにデプロイするために変更
 application = DjangoWhiteNoise(application)
+
+#application = Cling(get_wsgi_application())

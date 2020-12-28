@@ -137,7 +137,8 @@ MEDIA_URL = '/media/'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 #STATIC_ROOT = 'staticfiles'
-STATIC_ROOT = 'static'
+#STATIC_ROOT = 'static'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 try:
     from .local_settings import *
