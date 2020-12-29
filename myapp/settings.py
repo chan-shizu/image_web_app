@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'app/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'app1/media')
 MEDIA_URL = '/media/'
 
 # herokuにデプロイするために追加
