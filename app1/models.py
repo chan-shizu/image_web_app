@@ -3,7 +3,7 @@ import os.path
 import datetime
 
 def update_filename(instance, filename):
-    path = "document/"
+    path = "documents/"
     now = datetime.datetime.now()
     format = now.strftime('%Y%m%d_%H%M%S') + '.jpg'
     return os.path.join(path, format)
