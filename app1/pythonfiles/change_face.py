@@ -25,7 +25,7 @@ def overlay_face(input_path,output_path):
 
     # 顔認識用特徴量のファイル指定
     #cascade_path = "/root/work/web_app/gray_app/static/app1/cascade/haarcascade_frontalface_alt.xml"
-    cascade_path = "/root/work/web_app/gray_app/app1/static/app1/cascade/haarcascade_frontalface_alt.xml"
+    cascade_path = BASE_DIR + "/app1/static/app1/cascade/haarcascade_frontalface_alt.xml"
     # カスケード分類器の特徴量を取得する
     cascade = cv2.CascadeClassifier(cascade_path)
 
