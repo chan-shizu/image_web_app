@@ -40,10 +40,10 @@ def overlay_face(input_path,output_path):
         for rect in facerecog:
 
             # 認識結果を表示
-            print ("認識結果")
-            print ("(x,y)=(" + str(rect[0]) + "," + str(rect[1])+ ")" + \
-                "  高さ："+str(rect[2]) + \
-                "  幅："+str(rect[3]))
+            #print ("認識結果")
+            #print ("(x,y)=(" + str(rect[0]) + "," + str(rect[1])+ ")" + \
+            #    "  高さ："+str(rect[2]) + \
+            #    "  幅："+str(rect[3]))
 
             # 認識範囲にあわせて画像をリサイズ
             resized_ol_image = resize_image(ol_image, rect[2], rect[3])

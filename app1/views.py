@@ -49,7 +49,7 @@ def gray(input_path,output_path):
     cv2.imwrite(output_path, img_gray)
 
 def japanese2romaji(japanese):
-    print(japanese)
+    #print(japanese)
     kakasiObj = kakasi()
     kakasiObj.setMode('H', 'a')
     kakasiObj.setMode('K', 'a')
