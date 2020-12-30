@@ -4,6 +4,6 @@ from .models import Document
 class DocumentForm(forms.ModelForm):
     class Meta:
         model = Document
-        #fields = ('description', 'photo',)
-        fields = ('description', 'photo',)
+        fields = ('description','photo')
+        #fields = ('photo',)
 
